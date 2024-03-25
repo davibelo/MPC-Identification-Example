@@ -2,8 +2,8 @@ import pandas as pd
 import matplotlib.pyplot as plt
 
 # Step 1: Read the CSV file
-df = pd.read_csv('testeIdentificacao.csv', delimiter=";", index_col=0)
-df.columns = ['T_FUNDO', 'V_REFLUXO', 'C2GLP', 'C5GLP']
+df = pd.read_csv('identificationTest.csv', delimiter=";", index_col=0)
+df.columns = ['T_BOTTOM', 'V_REFLUX', 'C2LPG', 'C5LPG']
 print(df)
 
 # Number of columns to plot
