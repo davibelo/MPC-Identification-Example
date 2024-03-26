@@ -209,33 +209,33 @@ EV = 100*(np.round((1.0 - np.mean((Ytotvalid - Yv_armaxi) ** 2)/np.std(Ytotvalid
 plt.title("Validation: | Explained Variance ARMAX_i = {}%".format(EV))
 
 
-## Bode Plots
-# w_v = np.logspace(-3,4,num=701)
-# plt.figure(7)
-# mag, fi, om = cnt.bode(g_sample,w_v)
-# mag1, fi1, om = cnt.bode(Id_ARMAXi.G,w_v)
-# mag2, fi2, om = cnt.bode(Id_ARMAXo.G,w_v)
-# mag3, fi3, om = cnt.bode(Id_ARMAXr.G,w_v)
-# plt.subplot(2,1,1), plt.loglog(om,mag), plt.grid(),
-# plt.loglog(om,mag1), plt.loglog(om,mag2), plt.loglog(om,mag3)
-# plt.xlabel("w"),plt.ylabel("Amplitude Ratio"), plt.title("Bode Plot G(iw)")
-# plt.subplot(2,1,2), plt.semilogx(om,fi), plt.grid()
-# plt.semilogx(om,fi1), plt.semilogx(om,fi2), plt.semilogx(om,fi3),
-# plt.xlabel("w"),plt.ylabel("phase")
-# plt.legend(['System', 'ARMAX-I', 'ARMAX-0', 'ARMAX-R'])
+# Bode Plots
+w_v = np.logspace(-3,4,num=701)
+plt.figure(7)
+mag, fi, om = cnt.bode(g_sample,w_v)
+mag1, fi1, om = cnt.bode(Id_ARMAXi.G,w_v)
+mag2, fi2, om = cnt.bode(Id_ARMAXo.G,w_v)
+mag3, fi3, om = cnt.bode(Id_ARMAXr.G,w_v)
+plt.subplot(2,1,1), plt.loglog(om,mag), plt.grid(),
+plt.loglog(om,mag1), plt.loglog(om,mag2), plt.loglog(om,mag3)
+plt.xlabel("w"),plt.ylabel("Amplitude Ratio"), plt.title("Bode Plot G(iw)")
+plt.subplot(2,1,2), plt.semilogx(om,fi), plt.grid()
+plt.semilogx(om,fi1), plt.semilogx(om,fi2), plt.semilogx(om,fi3),
+plt.xlabel("w"),plt.ylabel("phase")
+plt.legend(['System', 'ARMAX-I', 'ARMAX-0', 'ARMAX-R'])
 
-# plt.figure(8)
-# mag, fi, om = cnt.bode(h_sample,w_v)
-# mag1, fi1, om = cnt.bode(Id_ARMAXi.H,w_v)
-# mag2, fi2, om = cnt.bode(Id_ARMAXo.H,w_v)
-# mag3, fi3, om = cnt.bode(Id_ARMAXr.H,w_v)
-# plt.subplot(2,1,1), plt.loglog(om,mag), plt.grid(),
-# plt.loglog(om,mag1), plt.loglog(om,mag2), plt.loglog(om,mag3)
-# plt.xlabel("w"),plt.ylabel("Amplitude Ratio"), plt.title("Bode Plot H(iw)")
-# plt.subplot(2,1,2), plt.semilogx(om,fi), plt.grid()
-# plt.semilogx(om,fi1), plt.semilogx(om,fi2), plt.semilogx(om,fi3),
-# plt.xlabel("w"),plt.ylabel("phase")
-# plt.legend(['System', 'ARMAX-I', 'ARMAX-0', 'ARMAX-R'])
+plt.figure(8)
+mag, fi, om = cnt.bode(h_sample,w_v)
+mag1, fi1, om = cnt.bode(Id_ARMAXi.H,w_v)
+mag2, fi2, om = cnt.bode(Id_ARMAXo.H,w_v)
+mag3, fi3, om = cnt.bode(Id_ARMAXr.H,w_v)
+plt.subplot(2,1,1), plt.loglog(om,mag), plt.grid(),
+plt.loglog(om,mag1), plt.loglog(om,mag2), plt.loglog(om,mag3)
+plt.xlabel("w"),plt.ylabel("Amplitude Ratio"), plt.title("Bode Plot H(iw)")
+plt.subplot(2,1,2), plt.semilogx(om,fi), plt.grid()
+plt.semilogx(om,fi1), plt.semilogx(om,fi2), plt.semilogx(om,fi3),
+plt.xlabel("w"),plt.ylabel("phase")
+plt.legend(['System', 'ARMAX-I', 'ARMAX-0', 'ARMAX-R'])
 
 
 ## Step test
